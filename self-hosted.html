@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self-Hosted Website - Marc Nims</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body class="page-project">
+
+  <nav>
+    <a href="index.html#projects" class="nav-back">&#8592; Back</a>
+    <span class="nav-logo">marcnims</span>
+  </nav>
+
+  <section class="project-header">
+    <div class="container">
+      <span class="card-tag">Live</span>
+      <h1>Self-Hosted Website</h1>
+      <p class="project-body">
+        You&rsquo;re loading this from my home server right now. I wanted to actually own where my site
+        runs, not just rent space on someone else&rsquo;s infrastructure. It&rsquo;s a Docker container
+        on my G5, exposed through a Cloudflare Tunnel &mdash; no port forwarding, no exposed IP, just
+        an outbound connection to Cloudflare&rsquo;s edge. NPM handles the internal proxying.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-section alt">
+    <div class="container">
+      <h2 class="section-title">Stack</h2>
+      <div class="project-grid">
+        <div class="project-detail-card">
+          <h4>Host</h4>
+          <p>HP ProDesk 600 G5 running Ubuntu Server 24.04. i5-9600T, 16GB RAM, on VLAN 20 (Servers).</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Container</h4>
+          <p>Static site served from an Nginx Docker container, managed alongside the rest of the stack in Docker Compose.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Nginx Proxy Manager</h4>
+          <p>Handles internal reverse proxying and SSL certificate management for all hosted services including this site.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Cloudflare Tunnel</h4>
+          <p>Outbound-only tunnel from the server to Cloudflare's edge. No open inbound ports, no exposed home IP address.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section alt">
+    <div class="container">
+      <h2 class="section-title">How I Built It</h2>
+      <p class="project-body">
+        I built this entire site using Claude Code straight from the terminal. Coding isn&rsquo;t my strong suit,
+        so I leaned on AI to handle the actual code while I stayed focused on what mattered &mdash; what the site
+        looks like, what it says, and how it&rsquo;s structured. I directed every decision: the layout, the project
+        pages, the color scheme, the content. Claude wrote the HTML and CSS, I told it what to change. It&rsquo;s
+        honestly a pretty effective way to build something real without getting stuck on syntax.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container">
+      <h2 class="section-title">What I Learned</h2>
+      <p class="project-body">
+        The biggest takeaway was learning how to expose something to the internet without actually
+        opening your network up. The Cloudflare Tunnel means pfSense never needed a port forward &mdash;
+        traffic comes in through Cloudflare, never directly to my server. That&rsquo;s the kind of
+        security thinking I want to keep applying everywhere.
+      </p>
+    </div>
+  </section>
+
+  <div class="project-footer">
+    <a href="index.html#projects" class="btn btn-outline">&#8592; Back to Portfolio</a>
+  </div>
+
+</body>
+</html>

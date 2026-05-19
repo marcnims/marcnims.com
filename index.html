@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marc Nims - Portfolio</title>
+  <meta name="description" content="Marc Nims &mdash; cybersecurity, homelab, and CTF portfolio." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">marcnims</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-pre">Hi, I'm</p>
+      <h1>Marc Nims</h1>
+      <p class="hero-title">
+        <span id="typed"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-desc">
+        Cybersecurity graduate and service member with a passion for networking,
+        self-hosted infrastructure, and hands-on security.
+      </p>
+      <div class="hero-cta">
+        <a href="https://github.com/marcnims" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-who">Husband. &nbsp; Soldier. &nbsp; My Family&rsquo;s SysAdmin.</p>
+          <ul class="about-list">
+            <li>Built a multi-VLAN home network from scratch using pfSense and a managed switch &mdash; six VLANs, default-deny firewall rules</li>
+            <li>Run a full Docker stack on Ubuntu Server &mdash; Jellyfin, Nginx Proxy Manager, Uptime Kuma, Portainer, and this site</li>
+            <li>Access everything remotely through Tailscale running as a subnet router on my home server</li>
+            <li>13 CTF machines on HackTheBox and TryHackMe as <strong>mong00se</strong></li>
+          </ul>
+          <p class="about-creds">
+            B.S. Cybersecurity Technology &mdash; University of Maryland Global Campus<br><br>*Certifications coming soon
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">4</span>
+            <span class="stat-label">VLANs configured</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">6</span>
+            <span class="stat-label">self-hosted services</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">13</span>
+            <span class="stat-label">CTFs as mong00se</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <a href="homelab.html" class="card card-homelab">
+          <div class="card-tag">Networking</div>
+          <h3>Homelab Network</h3>
+          <p>
+            Repurposed three HP ProDesk 600 mini PCs into a full homelab stack.
+          </p>
+          <ul class="card-details">
+            <li>PC #1 &mdash; pfSense router/firewall</li>
+            <li>PC #2 &mdash; Ubuntu Server running Docker containers</li>
+            <li>PC #3 &mdash; LMDE workstation with pentesting VMs</li>
+            <li>Multi-VLAN network with inter-VLAN firewall hardening</li>
+            <li>Tailscale for secure remote access from anywhere</li>
+          </ul>
+        </a>
+
+        <a href="wardriving.html" class="card card-ctf">
+          <div class="card-tag">Wireless Security</div>
+          <h3>Wardriving Pi</h3>
+          <p>
+            Built a Raspberry Pi wardriving rig with a touchscreen that automatically
+            boots Kismet on startup for passive wireless network reconnaissance.
+          </p>
+          <ul class="card-details">
+            <li>Raspberry Pi with touchscreen display</li>
+            <li>Alfa wireless adapter for monitor mode capture</li>
+            <li>GPS puck for location tagging</li>
+            <li>Kismet auto-launches on boot</li>
+          </ul>
+        </a>
+
+        <a href="self-hosted.html" class="card card-pi">
+          <div class="card-tag">Live</div>
+          <h3>Self-Hosted Website</h3>
+          <p>
+            Migrating marcnims.com off Cloudflare Pages into a Docker container
+            on my server, served through Nginx Proxy Manager and exposed via Cloudflare Tunnel.
+          </p>
+          <ul class="card-details">
+            <li>Docker container on my server</li>
+            <li>Nginx Proxy Manager &mdash; reverse proxy + TLS</li>
+            <li>Cloudflare Tunnel &mdash; no port forwarding needed</li>
+          </ul>
+        </a>
+
+        <a href="frigate.html" class="card card-coming">
+          <div class="card-tag">Coming Soon</div>
+          <h3>Frigate NVR</h3>
+          <p>
+            IP camera system using Frigate running in Docker on my server, with recordings
+            stored on dedicated storage and isolated on its own CAMERAS VLAN.
+          </p>
+          <ul class="card-details">
+            <li>Frigate &mdash; Docker container on my server</li>
+            <li>VLAN 40 camera isolation</li>
+            <li>PoE switch for camera power</li>
+            <li>No internet access &mdash; local only</li>
+          </ul>
+        </a>
+
+        <a href="pineapple.html" class="card">
+          <div class="card-tag">Wireless Security</div>
+          <h3>WiFi Pineapple Clone</h3>
+          <p>
+            Turned a GL.iNet GL-AR750 travel router into a WiFi Pineapple clone
+            for wireless auditing and rogue AP testing.
+          </p>
+          <ul class="card-details">
+            <li>GL-AR750 flashed with wifi-pineapple-cloner</li>
+            <li>Rogue AP and deauth capabilities</li>
+            <li>Portable wireless auditing platform</li>
+            <li>Open-source firmware build</li>
+          </ul>
+        </a>
+
+        <a href="homeassistant.html" class="card card-coming card-ha">
+          <div class="card-tag">In Progress</div>
+          <h3>Home Assistant</h3>
+          <p>
+            Home Assistant in Docker for local home automation &mdash; door sensors,
+            motion sensors, and smart lights, all without cloud dependency.
+          </p>
+          <ul class="card-details">
+            <li>Docker container on my home server</li>
+            <li>VLAN 20 isolation</li>
+            <li>Integrated with pfSense firewall rules</li>
+          </ul>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="container contact-inner">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-lead">
+        I'm actively looking for entry-level and junior roles where I can contribute
+        and keep growing. If you're hiring or just want to connect, reach out.
+      </p>
+
+      <div class="contact-roles">
+        <div class="contact-role">
+          <span class="role-icon">&#128274;</span>
+          <h4>Cybersecurity</h4>
+          <p>SOC Analyst<br>Network Security Engineer<br>Junior Penetration Tester</p>
+        </div>
+        <div class="contact-role">
+          <span class="role-icon">&#127760;</span>
+          <h4>Network</h4>
+          <p>Network Engineer<br>NOC Technician<br>Network Administrator</p>
+        </div>
+        <div class="contact-role">
+          <span class="role-icon">&#9729;&#65039;</span>
+          <h4>Cloud</h4>
+          <p>Cloud Engineer<br>Cloud Security<br>DevSecOps</p>
+        </div>
+      </div>
+
+      <div class="contact-links">
+        <a href="https://github.com/marcnims" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+        <a href="mailto:" class="btn btn-primary">Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Marc Nims</p>
+    <p class="photo-credit">Background photos by <a href="https://unsplash.com/@santesson89" target="_blank" rel="noopener">Andrea De Santis</a> and <a href="https://unsplash.com/@vishnumaiea" target="_blank" rel="noopener">Vishnu Mohanan</a> on Unsplash</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
