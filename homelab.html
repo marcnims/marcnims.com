@@ -31,7 +31,7 @@
     <div class="container">
       <h2 class="section-title">Hardware</h2>
       <div class="hardware-layout">
-        <img src="Pictures/myserverrack.jpg" alt="My homelab server rack" class="hardware-img" />
+        <img src="Pictures/homelab2.jpg" alt="My homelab server rack" class="hardware-img" />
         <div class="project-grid">
           <div class="project-detail-card">
             <h4>Router &mdash; HP ProDesk 600 G4</h4>
@@ -39,7 +39,7 @@
           </div>
           <div class="project-detail-card">
             <h4>Switching &amp; WiFi</h4>
-            <p>Netgear GS308E managed switch for VLAN trunking. Asus router running in AP-only mode connected to the switch.</p>
+            <p>Two Netgear GS308E managed switches with ports assigned to specific VLANs. Asus router running in AP-only mode connected to the switch.</p>
           </div>
           <div class="project-detail-card">
             <h4>Server &mdash; HP ProDesk 600 G5</h4>
@@ -58,9 +58,9 @@
     <div class="container">
       <h2 class="section-title">Network Design (please don&rsquo;t hack me)</h2>
       <p class="project-body">
-        Everything runs on 802.1Q VLANs across pfSense and my Netgear GS308E switch. Each VLAN gets
-        its own subnet, DHCP pool, and firewall rules. Default policy between VLANs is deny &mdash;
-        nothing talks to anything else unless I explicitly allow it.
+        Everything runs on 802.1Q VLANs across pfSense and two Netgear GS308E managed switches, with
+        ports assigned to specific VLANs. Each VLAN gets its own subnet, DHCP pool, and firewall rules.
+        Default policy between VLANs is deny &mdash; nothing talks to anything else unless I explicitly allow it.
       </p>
       <div class="project-grid">
         <div class="project-detail-card">
