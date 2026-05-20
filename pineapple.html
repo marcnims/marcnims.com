@@ -41,7 +41,7 @@
           </div>
           <div class="project-detail-card">
             <h4>wifi-pineapple-cloner</h4>
-            <p>Open-source project by xchwarze that automates flashing GL.iNet hardware with WiFi Pineapple-compatible firmware.</p>
+            <p>Open-source project by <a href="https://github.com/xchwarze/wifi-pineapple-cloner/" target="_blank" rel="noopener" style="color:var(--accent)">xchwarze</a> that automates flashing GL.iNet hardware with WiFi Pineapple-compatible firmware.</p>
           </div>
           <div class="project-detail-card">
             <h4>Firmware</h4>
@@ -56,14 +56,48 @@
     </div>
   </section>
 
+  <section class="project-section">
+    <div class="container">
+      <h2 class="section-title">What You Can Do With It</h2>
+      <p class="project-body">Once you control the AP a device connects to, you control the connection.</p>
+      <div class="project-grid">
+        <div class="project-detail-card">
+          <h4>Evil Twin / Rogue AP</h4>
+          <p>Broadcast a fake AP with the same SSID as a legitimate network. Clients automatically connect &mdash; their traffic flows through you before hitting the internet.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>MITM on Wireless Traffic</h4>
+          <p>Once a client is connected to your rogue AP, intercept all unencrypted traffic. Capture credentials, session tokens, and anything sent over HTTP.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Deauthentication Attacks</h4>
+          <p>Kick devices off a legitimate network by sending deauth frames. Force them to reconnect &mdash; to your AP. No encryption, no password needed to do this.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>WPA Handshake Capture</h4>
+          <p>Deauth a client, capture the 4-way handshake when it reconnects, and crack it offline with a wordlist. Works against weak passwords.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Client Tracking</h4>
+          <p>PineAP passively logs probe requests from nearby devices &mdash; SSIDs their devices are looking for, MAC addresses, signal strength. Full picture of wireless activity in range.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>DNS Spoofing</h4>
+          <p>Redirect DNS queries from connected clients to malicious pages &mdash; credential phishing, fake captive portals, or straight redirects to attacker-controlled infrastructure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="project-section alt">
     <div class="container">
       <h2 class="section-title">What I Learned</h2>
       <p class="project-body">
-        Seeing how easily devices connect to any AP broadcasting a familiar SSID is genuinely eye-opening.
-        Most clients don&rsquo;t verify anything &mdash; they just connect. This project made it real for
-        me why wireless security is so often the weakest link, and why management frame protection
-        actually matters.
+        I didn&rsquo;t realize how easy it is to flash Pineapple-compatible firmware onto certain travel routers
+        instead of buying actual Hak5 hardware. The GL-AR750 cost me a fraction of the price and does the same
+        thing. What got me was how accessible this all is &mdash; the hardware is cheap, the software is open
+        source, and the attacks work anywhere there&rsquo;s WiFi. Makes you wonder how many of these are
+        already deployed in airports, coffee shops, and hotels.
       </p>
     </div>
   </section>
