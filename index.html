@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marc Nims - Portfolio</title>
-  <meta name="description" content="Marc Nims &mdash; cybersecurity, homelab, and CTF portfolio." />
+  <meta name="description" content="Marc Nims &mdash; cybersecurity and homelab portfolio." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -45,26 +45,22 @@
           <p class="about-who">Husband. &nbsp; Soldier. &nbsp; My Family&rsquo;s SysAdmin.</p>
           <ul class="about-list">
             <li>Built a multi-VLAN home network from scratch using pfSense and two managed switches &mdash; six VLANs, default-deny firewall rules</li>
-            <li>Run a full Docker stack on Ubuntu Server &mdash; Jellyfin, Nginx Proxy Manager, Uptime Kuma, Portainer, and this site</li>
+            <li>Run a full Docker stack on Ubuntu Server &mdash; Jellyfin, Jellyseerr, Homarr, Nginx Proxy Manager, Uptime Kuma, Portainer, Home Assistant, and this website</li>
             <li>Access everything remotely through Tailscale running as a subnet router on my home server</li>
-            <li>13 CTF machines on HackTheBox and TryHackMe as <strong>mong00se</strong></li>
+            <li>Hands-on offensive security practice through HackTheBox and TryHackMe</li>
           </ul>
           <p class="about-creds">
-            B.S. Cybersecurity Technology &mdash; University of Maryland Global Campus<br><br>*Certifications coming soon
+            B.S. Cybersecurity Technology &mdash; University of Maryland Global Campus<br><br>Currently pursuing CompTIA Security+
           </p>
         </div>
         <div class="about-stats">
           <div class="stat">
-            <span class="stat-num">4</span>
+            <span class="stat-num">6</span>
             <span class="stat-label">VLANs configured</span>
           </div>
           <div class="stat">
-            <span class="stat-num">6</span>
+            <span class="stat-num">8</span>
             <span class="stat-label">self-hosted services</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">13</span>
-            <span class="stat-label">CTFs as mong00se</span>
           </div>
         </div>
       </div>
@@ -117,6 +113,19 @@
             <li>Docker container on my server</li>
             <li>Nginx Proxy Manager &mdash; reverse proxy + TLS</li>
             <li>Cloudflare Tunnel &mdash; no port forwarding needed</li>
+          </ul>
+        </a>
+
+        <a href="jellyfin-pi.html" class="card card-pi">
+          <div class="card-tag">Home Media</div>
+          <h3>Jellyfin Media Client</h3>
+          <p>
+            Firestick died. Grabbed a Pi 4B and turned it into a Jellyfin client instead.
+          </p>
+          <ul class="card-details">
+            <li>Raspberry Pi 4B running LibreELEC + Kodi</li>
+            <li>Jellyfin for Kodi &mdash; streams from my server on G5</li>
+            <li>Hardware H.265 decode &mdash; no transcoding needed</li>
           </ul>
         </a>
 
@@ -227,7 +236,7 @@
 
       <div class="contact-links">
         <a href="https://github.com/marcnims" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
-        <a href="mailto:" class="btn btn-primary">Email Me</a>
+        <a href="mailto:marc.nims@pm.me" class="btn btn-primary">Email Me</a>
       </div>
     </div>
   </section>

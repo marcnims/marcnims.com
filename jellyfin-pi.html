@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jellyfin Media Client - Marc Nims</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body class="page-project">
+
+  <nav>
+    <a href="index.html#projects" class="nav-back">&#8592; Back</a>
+    <span class="nav-logo">marcnims</span>
+  </nav>
+
+  <section class="project-header">
+    <div class="container">
+      <span class="card-tag">Home Media</span>
+      <h1>Jellyfin Media Client</h1>
+      <p class="project-body">
+        My Firestick died and I had a Raspberry Pi 4B sitting around, so I turned it into a
+        media client instead of buying a replacement. Not really a networking project, but it
+        touched enough of my homelab that things got complicated fast.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-section alt">
+    <div class="container">
+      <h2 class="section-title">Stack</h2>
+      <div class="project-grid">
+        <div class="project-detail-card">
+          <h4>Raspberry Pi 4B</h4>
+          <p>Plugged into the TV over micro-HDMI. Sits on my IoT VLAN, separate from the server it streams from.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>LibreELEC</h4>
+          <p>A minimal Linux OS that exists solely to run Kodi. No desktop, no package manager. Boots straight into the media center UI.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Kodi + Jellyfin Addon</h4>
+          <p>The Jellyfin for Kodi addon syncs my library from the server and handles playback. Streams over HTTP from my Jellyfin instance on G5.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Jellyfin Server</h4>
+          <p>Already running in Docker on my home server with Intel Quick Sync for hardware transcoding. The Pi 4B handles H.265 natively so it rarely needs to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container">
+      <h2 class="section-title">How I Built It</h2>
+      <p class="project-body">
+        Flashed LibreELEC and got it on the network. The Jellyfin addon isn&rsquo;t in Kodi&rsquo;s default
+        repo so I installed it manually over SSH. That opened up a dependency chain where Kodi
+        silently ignores anything not registered in its SQLite database, so I had to download
+        each missing module and enable it in the database manually. Ten modules total. The addon
+        also had a bug where a service restart crashes with a KeyError. One line fix once I read
+        the traceback.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-section alt">
+    <div class="container">
+      <h2 class="section-title">What I Learned</h2>
+      <p class="project-body">
+        The biggest thing was understanding how Kodi&rsquo;s addon system actually works. It&rsquo;s not
+        just a folder of plugins. There&rsquo;s a database managing state and the two have to agree.
+        That kind of gap between files existing and a system actually knowing about them shows
+        up everywhere once you start looking.
+      </p>
+      <p class="project-body">
+        Also just confirmed that reading a traceback is faster than guessing. Every error in
+        this build pointed straight at the fix once I stopped skimming and actually read it.
+      </p>
+    </div>
+  </section>
+
+  <div class="project-footer">
+    <a href="index.html#projects" class="btn btn-outline">&#8592; Back to Portfolio</a>
+  </div>
+
+</body>
+</html>

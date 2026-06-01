@@ -56,7 +56,7 @@
 
   <section class="project-section">
     <div class="container">
-      <h2 class="section-title">Network Design (please don&rsquo;t hack me)</h2>
+      <h2 class="section-title">Network Design</h2>
       <p class="project-body">
         Everything runs on 802.1Q VLANs across pfSense and two Netgear GS308E managed switches, with
         ports assigned to specific VLANs. Each VLAN gets its own subnet, DHCP pool, and firewall rules.
@@ -100,6 +100,18 @@
           <p>Media server with GPU passthrough for hardware transcoding. Library stored on a dedicated 5TB HDD.</p>
         </div>
         <div class="project-detail-card">
+          <h4>Jellyseerr</h4>
+          <p>Media request management frontend that integrates with Jellyfin for managing the media library.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Homarr</h4>
+          <p>Dashboard for quick access to all self-hosted services, running on the internal network.</p>
+        </div>
+        <div class="project-detail-card">
+          <h4>Home Assistant</h4>
+          <p>Local home automation platform. Door sensors, motion sensors, and smart lights &mdash; no cloud dependency.</p>
+        </div>
+        <div class="project-detail-card">
           <h4>Nginx Proxy Manager</h4>
           <p>Reverse proxy handling SSL termination and internal DNS routing for all services via <code>*.server</code> hostnames.</p>
         </div>
@@ -116,8 +128,8 @@
           <p>Mesh VPN running as a subnet router on the server. Gives secure remote access to all home services from anywhere.</p>
         </div>
         <div class="project-detail-card">
-          <h4>This Website</h4>
-          <p>marcnims.com runs as a Docker container on this server, exposed publicly via a Cloudflare Tunnel.</p>
+          <h4>Cloudflare Tunnel</h4>
+          <p>Outbound-only tunnel exposing marcnims.com publicly. No open inbound ports, no exposed home IP.</p>
         </div>
       </div>
     </div>
@@ -136,8 +148,9 @@
     </div>
   </section>
 
-  <div class="project-footer">
+  <div class="project-footer" style="gap: 1rem;">
     <a href="index.html#projects" class="btn btn-outline">&#8592; Back to Portfolio</a>
+    <a href="https://github.com/marcnims/homelab" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
   </div>
 
 </body>
